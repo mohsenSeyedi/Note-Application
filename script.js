@@ -35,6 +35,8 @@ function showModal(titleNote , descNote) {
     popupBox.classList.add('show')
 }
 
+
+
 function getDateNow() {
     let nowDate =new Date()
     let year= nowDate.getFullYear()
@@ -42,6 +44,8 @@ function getDateNow() {
     let months=monthsArray[nowDate.getMonth()] 
     return `${months} ${data}, ${year}`
 }
+
+
 
 buttonElem.addEventListener('click', () => {
 
@@ -81,10 +85,14 @@ buttonElem.addEventListener('click', () => {
 
 })
 
+
+
 function clearInputs () {
     inputElem.value = ''
     textareaElem.value = ''
 }
+
+
 
 function generateNotes(notes) {
 
@@ -116,6 +124,8 @@ function generateNotes(notes) {
     })
 }
 
+
+
 function showSetting (el) {
     el.parentElement.classList.add('show')
 
@@ -130,6 +140,7 @@ function showSetting (el) {
 }
 
 
+
 function getLocalStorageNotes() {
     let localStorageNotes = localStorage.getItem('notes')
 
@@ -142,18 +153,26 @@ function getLocalStorageNotes() {
     return notes
 }
 
+
+
 function setNotesInLocalStorage(notes) {
     localStorage.setItem('notes', JSON.stringify(notes))
 }
+
+
 
 function closeModal () {
     popupBox.classList.remove('show')
 }
 
+
+
 window.addEventListener('load', () => {
     let notes = getLocalStorageNotes()
     generateNotes(notes)
 })
+
+
 
 window.addEventListener('keyup', event => {
 
@@ -162,6 +181,8 @@ window.addEventListener('keyup', event => {
     }
 
 })
+
+
 
 function deleteNote(noteIndex) {
 
@@ -177,12 +198,15 @@ function deleteNote(noteIndex) {
 
 }
 
+
 function updateNote(noteIid , titleNote , descNote) {
     isUpdate=true
     showModal( titleNote , descNote)
     
     UpdateId=noteIid
 }
+
+
 
 popupClose.addEventListener('click', closeModal)
 addBox.addEventListener('click', showModal)
