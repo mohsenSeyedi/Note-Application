@@ -61,24 +61,6 @@ body{
   max-height: 165px;
   overflow-y: auto;
 }
-.note .details::-webkit-scrollbar,
-.popup textarea::-webkit-scrollbar{
-  width: 0;
-}
-.note .details:hover::-webkit-scrollbar,
-.popup textarea:hover::-webkit-scrollbar{
-  width: 5px;
-}
-.note .details:hover::-webkit-scrollbar-track,
-.popup textarea:hover::-webkit-scrollbar-track{
-  background: #f1f1f1;
-  border-radius: 25px;
-}
-.note .details:hover::-webkit-scrollbar-thumb,
-.popup textarea:hover::-webkit-scrollbar-thumb{
-  background: #e6e6e6;
-  border-radius: 25px;
-}
 .note p{
   font-size: 22px;
   font-weight: 500;
@@ -229,18 +211,4 @@ form button{
   font-size: 17px;
   border-radius: 4px;
   background: #6A93F8;
-}
-
-@media (max-width: 660px){
-  .wrapper{
-    margin: 15px;
-    gap: 15px;
-    grid-template-columns: repeat(auto-fill, 100%);
-  }
-  .popup-box .popup{
-    max-width: calc(100% - 15px);
-  }
-  .bottom-content .settings i{
-    font-size: 17px;
-  }
 }
